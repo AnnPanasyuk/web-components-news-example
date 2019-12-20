@@ -1,11 +1,11 @@
 class NewsArticle extends HTMLElement {
   constructor() {
     super();
-    this.root = this.attachShadow({ mode: 'open' });
+    this.root = this.attachShadow({ mode: 'closed' });
   }
   set article(article) {
     this.root.innerHTML = `
-          <style>
+          <style scoped>
            h2 {
             font-family: Georgia, 'Times New Roman', Times, serif;
           }
